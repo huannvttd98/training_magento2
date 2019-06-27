@@ -1,0 +1,81 @@
+
+<h1> Danh sach phim </h1>
+<style>
+    table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+    td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
+    tr:nth-child(even) { background-color: #dddddd; }
+    .post-id{width:5%} .post-name{width:30%}
+
+</style>
+
+<table>
+    <tr>
+        <th class="post-id">Ma phim </th>
+        <th class="post-name">Ten phim</th>
+        <th>Gio thieu </th>
+        <th>Diem danh gia </th>
+        <th>khoa ngoai</th>
+    </tr>
+    <?php
+    foreach ($block->getPostCollection() as $key=>$post){
+        echo '<tr>                    
+                <td>'.$post->getmovie_id().'</td>
+                <td>'.$post->getName().'</td>
+                <td>'.$post->getdescription().'</td>
+                <td>'.$post->getrating().'</td>
+                <td>'.$post->getdirector_id().'</td>
+              </tr>';
+    }
+
+
+?>
+</table>
+<br>
+
+
+<h1>Danh sach thong tin chi tiet </h1>
+<table>
+    <tr>
+        <th class="post-id"> phim </th>
+        <th class="post-name">Ten phim</th>
+        <th>Gio thieu </th>
+        <th>Diem danh gia </th>
+        <th>Mo ta </th>
+        <th>Dien vien dong</th>
+    </tr>
+    <?php
+    foreach ($block->getdatajoin() as $key=> $a){
+        echo '<tr>
+            <td>'.$a->getmovie_id().'</td>
+            <td>'.$a->getName().'</td>
+            <td>'.$a->getdescription().'</td>
+            <td>'.$a->getrating().'</td>
+            <td>'.$a->getdirector_name().'</td>
+            <td>'.$a->getactor_name().'</td>    
+        </tr>';
+
+    };
+
+    ?>
+</table>
+
+<h1>Danh sach dien vien  </h1>
+
+<table>
+    <tr>
+        <th class="post-id"> ID actor </th>
+        <th class="post-name">Ten dien vien</th>
+    </tr>
+    <?php
+
+        foreach ($block->getactor() as $key=> $a){
+            echo '<tr>
+            <td>'.$a->getactor_id().'</td>
+            <td>'.$a->getName().'</td>
+        
+            
+        </tr>';
+
+        };
+    ?>
+</table>
