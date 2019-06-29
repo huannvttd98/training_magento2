@@ -9,7 +9,7 @@ enu.xsd">
                 module="Magenest_Movie"
                 sortOrder="50"
                 parent="Magento_Backend::marketing"
-                resource="Magenest_Movie::Movie"
+                    resource="Magenest_Movie::Movie"
         />
         <add
                 id="Magenest_Movie::index"
@@ -18,7 +18,17 @@ enu.xsd">
                 sortOrder="55"
                 parent="Magenest_Movie::Movie"
                 action="Movie/index/"
-                resource="Magenest_Movie::index"
+                resource="Magenest_Movie::Movie"
+        />
+
+        <add
+                id="Magenest_Movie::subscription"
+                title="Subscriptions"
+                module="Magenest_Movie"
+                sortOrder="70"
+                parent="Magenest_Movie::Movie"
+                action="Movie/subscription/"
+                resource="Magenest_Movie::subscription"
         />
     </menu>
 </config>

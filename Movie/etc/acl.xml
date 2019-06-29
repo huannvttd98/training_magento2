@@ -7,13 +7,27 @@
                 <resource id="Magento_Backend::marketing">
                     <resource id="Magenest_Movie::Movie"
 
-                              title="Movvie" sortOrder="60">
+                              title="Movie" sortOrder="60">
 
                         <resource id="Magenest_Movie::index"
 
                                   title="Movie index" />
+
+                        <resource id="Magenest_Movie::subscription" title="Movie subscription" />
                     </resource>
                 </resource>
+
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Magenest_Movie::config_Movie"
+
+                                      title="Movie Section" />
+
+                        </resource>
+                    </resource>
+                </resource>
+
             </resource>
         </resources>
     </acl>
