@@ -24,10 +24,4 @@ class Index extends \Magento\Backend\App\Action
         return $this->_authorization->isAllowed('Magenest_Movie::index');
     }
 
-    public function  ech()
-    {
-        echo 'huan';
-        exit();
-        return  1;
-    }
 }
