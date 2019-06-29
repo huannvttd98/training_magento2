@@ -33,7 +33,7 @@ class UpgradeData implements UpgradeDataInterface
 
 //   insert value tbale magenest_movie_actor
             $table3 = $setup->getTable('magenest_movie_actor');
-            $setup->getConnection()->insertForce($table3,['movie_id'=>'3','actor_id'=>'3']);
+            $setup->getConnection()->insertForce($table3,['movie_id'=>'1','actor_id'=>'1']);
         }
         $setup->endSetup();
 
